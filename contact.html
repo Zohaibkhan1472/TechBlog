@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechPulse</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Get in touch with TechPulse. Contact us for collaborations, questions, or feedback about our technology content.">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                TechPulse
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title animate-fade-in-up">Get In Touch</h1>
+                <p class="page-subtitle animate-fade-in-up">We'd love to hear from you. Let's start a conversation about technology and innovation.</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="page-content">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section scroll-animate">
+                        <h2>Send us a Message</h2>
+                        <p>Whether you have questions, feedback, or collaboration ideas, we're here to listen and respond.</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic...</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                    <option value="guest-post">Guest Post Submission</option>
+                                    <option value="feedback">Website Feedback</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="press">Press Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell us more about your inquiry..." required></textarea>
+                                <div class="character-count">
+                                    <span id="charCount">0</span>/1000 characters
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for the latest tech insights
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" class="privacy-link">Privacy Policy</a> and <a href="#" class="privacy-link">Terms of Service</a> *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <div class="loading-spinner"></div>
+                                    Sending...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-section scroll-animate">
+                        <h2>Contact Information</h2>
+                        <p>Prefer direct contact? Reach out to us through any of these channels.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-content">
+                                    <h4>Email Us</h4>
+                                    <p>hello@techpulse.com</p>
+                                    <small>We typically respond within 24 hours</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📞</div>
+                                <div class="method-content">
+                                    <h4>Call Us</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                    <small>Mon-Fri, 9AM-6PM PST</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📍</div>
+                                <div class="method-content">
+                                    <h4>Visit Us</h4>
+                                    <p>123 Innovation Street<br>San Francisco, CA 94000</p>
+                                    <small>By appointment only</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">💬</div>
+                                <div class="method-content">
+                                    <h4>Live Chat</h4>
+                                    <p>Available on our website</p>
+                                    <small>Mon-Fri, 10AM-5PM PST</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-connect">
+                            <h3>Connect With Us</h3>
+                            <div class="social-grid">
+                                <a href="#" class="social-item twitter">
+                                    <div class="social-icon">🐦</div>
+                                    <div class="social-content">
+                                        <h4>Twitter</h4>
+                                        <p>@techpulse</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="social-item linkedin">
+                                    <div class="social-icon">💼</div>
+                                    <div class="social-content">
+                                        <h4>LinkedIn</h4>
+                                        <p>TechPulse</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="social-item github">
+                                    <div class="social-icon">🐙</div>
+                                    <div class="social-content">
+                                        <h4>GitHub</h4>
+                                        <p>techpulse-dev</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="social-item youtube">
+                                    <div class="social-icon">📺</div>
+                                    <div class="social-content">
+                                        <h4>YouTube</h4>
+                                        <p>TechPulse Channel</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="faq-section scroll-animate">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>How can I contribute to TechPulse?</h4>
+                            <p>We welcome guest contributors! Send us your article ideas along with a brief author bio. We're particularly interested in original insights, tutorials, and industry analysis.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Do you offer sponsored content opportunities?</h4>
+                            <p>Yes, we offer various partnership opportunities including sponsored articles, newsletter mentions, and banner placements. Contact us for our media kit.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Can I request coverage of specific topics?</h4>
+                            <p>Absolutely! We value our readers' input. Send us your topic suggestions and we'll consider them for future articles.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>How often do you publish new content?</h4>
+                            <p>We publish 3-4 new articles per week, covering various aspects of technology and innovation. Subscribe to our newsletter to stay updated.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Do you provide consulting services?</h4>
+                            <p>While our primary focus is content creation, some of our team members offer consulting services. Contact us to discuss your specific needs.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>How can I report a technical issue?</h4>
+                            <p>If you encounter any technical problems with our website, please use the contact form above and select "Technical Support" as your subject.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Office Hours -->
+                <div class="office-hours-section scroll-animate">
+                    <h2>Office Hours & Response Times</h2>
+                    <div class="hours-grid">
+                        <div class="hours-item">
+                            <h4>📧 Email Inquiries</h4>
+                            <p>Response time: 24-48 hours</p>
+                            <p>Priority support for urgent matters</p>
+                        </div>
+                        
+                        <div class="hours-item">
+                            <h4>📞 Phone Support</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                            <p>Weekend emergency line available</p>
+                        </div>
+                        
+                        <div class="hours-item">
+                            <h4>💬 Live Chat</h4>
+                            <p>Monday - Friday: 10:00 AM - 5:00 PM PST</p>
+                            <p>Automated responses outside hours</p>
+                        </div>
+                        
+                        <div class="hours-item">
+                            <h4>🌐 Social Media</h4>
+                            <p>Response time: 2-4 hours during business days</p>
+                            <p>Active monitoring Monday - Friday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span>TechPulse</span>
+                    </div>
+                    <p>Your trusted source for technology insights and digital innovation stories.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="GitHub">🐙</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=ai">Artificial Intelligence</a></li>
+                        <li><a href="blog.html?category=web">Web Development</a></li>
+                        <li><a href="blog.html?category=security">Cybersecurity</a></li>
+                        <li><a href="blog.html?category=quantum">Quantum Computing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📧 hello@techpulse.com</li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📍 San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechPulse. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initContactForm();
+        });
+
+        function initContactForm() {
+            const form = document.getElementById('contactForm');
+            const messageField = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+            
+            // Character counter
+            messageField.addEventListener('input', function() {
+                const count = this.value.length;
+                charCount.textContent = count;
+                
+                if (count > 950) {
+                    charCount.style.color = '#ef4444';
+                } else if (count > 800) {
+                    charCount.style.color = '#f59e0b';
+                } else {
+                    charCount.style.color = '#6b7280';
+                }
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                handleContactFormSubmission(this);
+            });
+        }
+
+        function handleContactFormSubmission(form) {
+            const submitBtn = form.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'flex';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Success message
+                showNotification('Thank you for your message! We\'ll get back to you within 24 hours.', 'success');
+                
+                // Reset form
+                form.reset();
+                document.getElementById('charCount').textContent = '0';
+                
+                // Reset button
+                btnText.style.display = 'block';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+    </script>
+
+    <style>
+        /* Contact page specific styles */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-3xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .contact-form-section h2,
+        .contact-info-section h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-form-section p,
+        .contact-info-section p {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.6;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            background: var(--bg-secondary);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            font-family: var(--font-primary);
+            transition: var(--transition-base);
+            background: var(--bg-primary);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .character-count {
+            text-align: right;
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            margin-top: var(--spacing-xs);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            cursor: pointer;
+            font-size: var(--font-size-sm);
+            line-height: 1.5;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .privacy-link {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            justify-content: center;
+            position: relative;
+        }
+
+        .btn-loading {
+            display: none;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        /* Contact Information Styles */
+        .contact-methods {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-base);
+        }
+
+        .contact-method:hover {
+            background: var(--bg-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .method-icon {
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color);
+            color: white;
+            border-radius: var(--radius-lg);
+            flex-shrink: 0;
+        }
+
+        .method-content h4 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .method-content p {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .method-content small {
+            color: var(--text-muted);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Social Connect */
+        .social-connect h3 {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition-base);
+        }
+
+        .social-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+        }
+
+        .social-content h4 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .social-content p {
+            font-size: var(--font-size-sm);
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .faq-item {
+            padding: var(--spacing-lg);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .faq-item h4 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Office Hours */
+        .office-hours-section h2 {
+            text-align: center;
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .hours-item {
+            text-align: center;
+            padding: var(--spacing-xl);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-base);
+        }
+
+        .hours-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hours-item h4 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hours-item p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-2xl);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: var(--spacing-lg);
+            }
+            
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .method-icon {
+                align-self: center;
+                margin-bottom: var(--spacing-md);
+            }
+            
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: var(--spacing-md);
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

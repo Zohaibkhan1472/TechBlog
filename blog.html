@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TechPulse</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore our latest technology articles covering AI, web development, cybersecurity, and emerging tech trends.">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                TechPulse
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Blog Header -->
+        <section class="blog-header page-header">
+            <div class="container">
+                <h1 class="page-title animate-fade-in-up">Tech Blog</h1>
+                <p class="page-subtitle animate-fade-in-up">Insights, trends, and innovations shaping the digital future</p>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="page-content">
+            <div class="container">
+                <!-- Search and Filters -->
+                <div class="blog-controls">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search articles..." class="search-input">
+                        <div id="searchResults" class="search-results"></div>
+                    </div>
+                    
+                    <div class="blog-filters">
+                        <a href="#" class="filter-btn active" data-category="all">All</a>
+                        <a href="#" class="filter-btn" data-category="ai">AI & ML</a>
+                        <a href="#" class="filter-btn" data-category="web">Web Dev</a>
+                        <a href="#" class="filter-btn" data-category="security">Security</a>
+                        <a href="#" class="filter-btn" data-category="quantum">Quantum</a>
+                        <a href="#" class="filter-btn" data-category="mobile">Mobile</a>
+                    </div>
+                </div>
+
+                <!-- Featured Article -->
+                <div class="featured-section">
+                    <h2 class="section-title">Featured Article</h2>
+                    <article class="featured-article scroll-animate">
+                        <div class="featured-image">
+                            <!-- REPLACE THIS: Add featured article image -->
+                            <img src="images/ai-future.jpg" alt="Future of AI" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder-featured">🚀</div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="article-meta">
+                                <span class="category-tag ai">Artificial Intelligence</span>
+                                <span class="date">📅 May 22, 2025</span>
+                                <span class="read-time">⏱️ 8 min read</span>
+                            </div>
+                            <h2 class="featured-title">The Future of AI: Beyond Human Intelligence</h2>
+                            <p class="featured-excerpt">As artificial intelligence continues to evolve at an unprecedented pace, we stand at the threshold of a new era. This comprehensive analysis explores what lies ahead for AI technology, from artificial general intelligence to the potential for AI systems that surpass human cognitive abilities in every domain.</p>
+                            <a href="articles/future-of-ai.html" class="btn btn-primary">Read Full Article</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="articles-section">
+                    <h2 class="section-title">Latest Articles</h2>
+                    <div class="articles-grid" id="articlesGrid">
+                        
+                        <article class="article-card scroll-animate" data-category="ai">
+                            <div class="article-image">
+                                <!-- REPLACE THIS: Add AI article image -->
+                                <img src="images/ai-technology.jpg" alt="AI Technology" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-image">🤖</div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-tag ai">AI & ML</span>
+                                    <span class="date">📅 May 20, 2025</span>
+                                    <span class="author">👤 Alex Chen</span>
+                                    <span class="read-time">⏱️ 5 min read</span>
+                                </div>
+                                <h3 class="article-title">The Rise of AI in Everyday Applications</h3>
+                                <p class="article-excerpt">Artificial Intelligence is transforming our daily lives in unprecedented ways. From smart assistants to predictive analytics, discover how AI is reshaping our digital experiences.</p>
+                                <a href="articles/ai-applications.html" class="read-more">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card scroll-animate" data-category="web">
+                            <div class="article-image">
+                                <!-- REPLACE THIS: Add web development image -->
+                                <img src="images/web-development.jpg" alt="Web Development" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-image">🌐</div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-tag web">Web Dev</span>
+                                    <span class="date">📅 May 18, 2025</span>
+                                    <span class="author">👤 Sarah Johnson</span>
+                                    <span class="read-time">⏱️ 4 min read</span>
+                                </div>
+                                <h3 class="article-title">Web Development Trends to Watch in 2025</h3>
+                                <p class="article-excerpt">The web development landscape is evolving rapidly with new frameworks, tools, and methodologies emerging at breakneck speed.</p>
+                                <a href="articles/web-trends-2025.html" class="read-more">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card scroll-animate" data-category="quantum">
+                            <div class="article-image">
+                                <!-- REPLACE THIS: Add quantum computing image -->
+                                <img src="images/quantum-computing.jpg" alt="Quantum Computing" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-image">⚛️</div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-tag quantum">Quantum</span>
+                                    <span class="date">📅 May 15, 2025</span>
+                                    <span class="author">👤 Mike Rodriguez</span>
+                                    <span class="read-time">⏱️ 6 min read</span>
+                                </div>
+                                <h3 class="article-title">Quantum Computing: The Next Frontier</h3>
+                                <p class="article-excerpt">Quantum computing promises to revolutionize industries from cryptography to drug discovery. Learn about the latest breakthroughs.</p>
+                                <a href="articles/quantum-computing.html" class="read-more">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card scroll-animate" data-category="security">
+                            <div class="article-image">
+                                <!-- REPLACE THIS: Add cybersecurity image -->
+                                <img src="images/cybersecurity.jpg" alt="Cybersecurity" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-image">🔒</div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-tag security">Security</span>
+                                    <span class="date">📅 May 12, 2025</span>
+                                    <span class="author">👤 Emma Davis</span>
+                                    <span class="read-time">⏱️ 7 min read</span>
+                                </div>
+                                <h3 class="article-title">Cybersecurity in Remote Work Era</h3>
+                                <p class="article-excerpt">As remote work becomes permanent, cybersecurity challenges have evolved. Discover the latest threats and protection strategies.</p>
+                                <a href="articles/cybersecurity-remote.html" class="read-more">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card scroll-animate" data-category="mobile">
+                            <div class="article-image">
+                                <!-- REPLACE THIS: Add mobile development image -->
+                                <img src="images/mobile-development.jpg" alt="Mobile Development" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-image">📱</div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-tag mobile">Mobile</span>
+                                    <span class="date">📅 May 10, 2025</span>
+                                    <span class="author">👤 David Kim</span>
+                                    <span class="read-time">⏱️ 5 min read</span>
+                                </div>
+                                <h3 class="article-title">React Native vs Flutter: 2025 Comparison</h3>
+                                <p class="article-excerpt">A comprehensive comparison of the two leading cross-platform mobile development frameworks in 2025.</p>
+                                <a href="articles/react-native-vs-flutter.html" class="read-more">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card scroll-animate" data-category="ai">
+                            <div class="article-image">
+                                <!-- REPLACE THIS: Add machine learning image -->
+                                <img src="images/machine-learning.jpg" alt="Machine Learning" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="placeholder-image">🧠</div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-tag ai">AI & ML</span>
+                                    <span class="date">📅 May 8, 2025</span>
+                                    <span class="author">👤 Lisa Zhang</span>
+                                    <span class="read-time">⏱️ 6 min read</span>
+                                </div>
+                                <h3 class="article-title">Machine Learning in Healthcare: Real-World Applications</h3>
+                                <p class="article-excerpt">Exploring how machine learning is revolutionizing healthcare with practical examples and case studies from leading institutions.</p>
+                                <a href="articles/ml-healthcare.html" class="read-more">Read More →</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="load-more-container">
+                        <button class="btn btn-outline" id="loadMoreBtn">Load More Articles</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span>TechPulse</span>
+                    </div>
+                    <p>Your trusted source for technology insights and digital innovation stories.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="GitHub">🐙</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=ai">Artificial Intelligence</a></li>
+                        <li><a href="blog.html?category=web">Web Development</a></li>
+                        <li><a href="blog.html?category=security">Cybersecurity</a></li>
+                        <li><a href="blog.html?category=quantum">Quantum Computing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📧 hello@techpulse.com</li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📍 San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechPulse. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Blog-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initBlogFilters();
+            initBlogSearch();
+            initLoadMore();
+        });
+
+        function initBlogFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const articles = document.querySelectorAll('.article-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active filter
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Filter articles
+                    articles.forEach(article => {
+                        if (category === 'all' || article.getAttribute('data-category') === category) {
+                            article.style.display = 'block';
+                            article.classList.add('animate-fade-in-up');
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        function initBlogSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const articles = document.querySelectorAll('.article-card');
+            
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase().trim();
+                
+                articles.forEach(article => {
+                    const title = article.querySelector('.article-title').textContent.toLowerCase();
+                    const excerpt = article.querySelector('.article-excerpt').textContent.toLowerCase();
+                    
+                    if (query === '' || title.includes(query) || excerpt.includes(query)) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        function initLoadMore() {
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            let articlesLoaded = 6;
+            
+            loadMoreBtn.addEventListener('click', function() {
+                // Simulate loading more articles
+                this.textContent = 'Loading...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    // In a real application, you would fetch more articles from an API
+                    showNotification('No more articles to load', 'info');
+                    this.style.display = 'none';
+                }, 1000);
+            });
+        }
+    </script>
+
+    <style>
+        /* Blog page specific styles */
+        .blog-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-2xl);
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            font-size: var(--font-size-base);
+            transition: var(--transition-base);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+
+        .search-results.show {
+            display: block;
+        }
+
+        .featured-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .section-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .featured-article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            background: var(--bg-primary);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-base);
+        }
+
+        .featured-article:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .featured-image {
+            position: relative;
+            height: 400px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .placeholder-featured {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-size: 5rem;
+        }
+
+        .featured-content {
+            padding: var(--spacing-2xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.3;
+        }
+
+        .featured-excerpt {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.7;
+        }
+
+        .category-tag {
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .category-tag.ai {
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary-color);
+        }
+
+        .category-tag.web {
+            background: rgba(34, 197, 94, 0.1);
+            color: #059669;
+        }
+
+        .category-tag.security {
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+        }
+
+        .category-tag.quantum {
+            background: rgba(168, 85, 247, 0.1);
+            color: #7c3aed;
+        }
+
+        .category-tag.mobile {
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+        }
+
+        .load-more-container {
+            text-align: center;
+            margin-top: var(--spacing-2xl);
+        }
+
+        @media (max-width: 1024px) {
+            .featured-article {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-container {
+                max-width: none;
+                margin-bottom: var(--spacing-md);
+            }
+            
+            .blog-filters {
+                justify-content: center;
+            }
+            
+            .featured-content {
+                padding: var(--spacing-lg);
+            }
+            
+            .featured-title {
+                font-size: var(--font-size-xl);
+            }
+        }
+
+        /* Notification styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: var(--spacing-lg);
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: var(--transition-base);
+            max-width: 400px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.hide {
+            transform: translateX(100%);
+        }
+
+        .notification-success {
+            border-left: 4px solid #10b981;
+        }
+
+        .notification-error {
+            border-left: 4px solid #ef4444;
+        }
+
+        .notification-info {
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: var(--font-size-lg);
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: var(--text-muted);
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: var(--font-size-lg);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-base);
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: absolute;
+            background: var(--text-primary);
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            z-index: 1000;
+            opacity: 0;
+            transition: var(--transition-base);
+            pointer-events: none;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: var(--text-primary);
+        }
+    </style>
+</body>
+</html>
