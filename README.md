@@ -75,7 +75,7 @@ Once your EC2 instance is in the "running" state and both health checks pass, yo
    - Username: `ubuntu`
    - Public IPv4: `3.92.66.234`
 4. Click the orange **Connect** button.
-   ![Connect](screenshots\Picture9.png)
+   ![Connect](screenshots/Picture9.png)
 
 > ✅ You’ll be connected to your server via browser-based SSH.
 
@@ -87,7 +87,7 @@ Once your EC2 instance is in the "running" state and both health checks pass, yo
 cd Downloads
 ssh -i "tech-blog-key.pem" ubuntu@3.92.66.234"
 ```
-![connection success](screenshots\Picture10.png)
+![connection success](screenshots/Picture10.png)
 
 ## ⚙️ Step 3: Set Up Your Server
 
@@ -229,12 +229,14 @@ Add the following two **A records**:
 |------|-------|------------------|--------|
 | A    | @     | 3.92.66.234      | 1400   |
 | A    | www   | 3.92.66.234      | 1400   |
-![DNS1](screenshots/Picture14.png)
-![DNS1](screenshots/Picture15.png)
+
 
 
 > ✅ `@` maps to your root domain  
 > ✅ `www` allows visitors to reach `www.zohaibyounas.com`
+
+![DNS1](screenshots/Picture14.png)
+![DNS1](screenshots/Picture15.png)
 
 ---
 
