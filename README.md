@@ -15,7 +15,7 @@ You will launch a virtual server, install necessary software, deploy your websit
 
 1. **Open AWS Console**  
    Log in to the [AWS Management Console](https://aws.amazon.com/console/) and search for `EC2`.
-   ![EC2](screenshots\Picture1.png)
+   ![EC2](screenshots/Picture1.png)
 
 
 2. **Navigate to EC2 Dashboard**  
@@ -23,12 +23,12 @@ You will launch a virtual server, install necessary software, deploy your websit
 
 3. **Launch New Instance**  
    On the EC2 dashboard, click the orange **Launch instance** button on the right side.
-    ![Launch Instance](screenshots\Picture2.png)
+    ![Launch Instance](screenshots/Picture2.png)
 
 4. **Configure Instance Name and OS**  
    - **Name:** Enter a name like `My Web Server` in the **Name** field.
    - **OS:** Select **Ubuntu** from the Quick Start list (blue tile with the Ubuntu logo).
-    ![Configure](screenshots\Picture3.png)
+    ![Configure](screenshots/Picture3.png)
 
 5. **Create Key Pair**  
    - Click **Create new key pair**.
@@ -36,29 +36,29 @@ You will launch a virtual server, install necessary software, deploy your websit
    - Leave default settings: `RSA`, `.pem`.
    - Click **Create key pair** – the `.pem` file will download.
    - **Save this file securely** – it's needed for SSH access.
-   ![Configure](screenshots\Picture4.png)
+   ![Configure](screenshots/Picture4.png)
 
 6. **Configure Firewall (Security Group)**  
    Ensure these rules are enabled:
    - ✅ Allow **SSH** (default)
    - ✅ Allow **HTTP** from the internet
    - ✅ Allow **HTTPS** from the internet
-    ![Network Setting](screenshots\Picture5.png)
+    ![Network Setting](screenshots/Picture5.png)
 
 7. **Storage Settings**  
    - Default is **8 GiB gp3** – this is sufficient for a static website.
    - No changes needed.
-   ![Storage Setting](screenshots\Picture6.png)
+   ![Storage Setting](screenshots/Picture6.png)
 
 8. **Review and Launch**  
    - Review all settings.
    - Click the orange **Launch instance** button.
-   ![Review and Launch](screenshots\Picture7.png)
+   ![Review and Launch](screenshots/Picture7.png)
 
 9. **Confirmation**  
    - You’ll see a success message with your Instance ID (`i-xxxxxxxxxxxxxx`).
    - Click on **Instances** in the navigation bar to see your server.
-   ![Confirmation](screenshots\Picture8.png)
+   ![Confirmation](screenshots/Picture8.png)
 
 
 ---
@@ -100,7 +100,7 @@ Follow the steps below to install required software, deploy your website, and co
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
-![Update](screenshots\Picture11.png)
+![Update](screenshots/Picture11.png)
 
 ---
 
@@ -192,7 +192,7 @@ sudo rm /etc/nginx/sites-enabled/default
 ```bash
 sudo nginx -t
 ```
-![Test Inginx](screenshots\Picture12.png)
+![Test Inginx](screenshots/Picture12.png)
 
 ---
 
@@ -216,7 +216,7 @@ If you've registered your domain with [Hostinger](https://hostinger.com), follow
 3. Select your domain (e.g., `zohaibyounas.com`).
 4. Click on **DNS / Nameservers**.
 
-![DNS](screenshots\Picture13.png)
+![DNS](screenshots/Picture13.png)
 
 ---
 
@@ -229,8 +229,8 @@ Add the following two **A records**:
 |------|-------|------------------|--------|
 | A    | @     | 3.92.66.234      | 1400   |
 | A    | www   | 3.92.66.234      | 1400   |
-![DNS1](screenshots\Picture14.png)
-![DNS1](screenshots\Picture15.png)
+![DNS1](screenshots/Picture14.png)
+![DNS1](screenshots/Picture15.png)
 
 
 > ✅ `@` maps to your root domain  
@@ -285,7 +285,7 @@ You will be asked the following:
 ### ✅ 3. Successful Output
 
 After a successful installation, you should see:
-![DNS1](screenshots\Picture16.png)
+![DNS1](screenshots/Picture16.png)
 
 ```text
 Congratulations! You have successfully enabled HTTPS on:
