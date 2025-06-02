@@ -48,12 +48,14 @@ You will launch a virtual server, install necessary software, deploy your websit
 7. **Storage Settings**  
    - Default is **8 GiB gp3** – this is sufficient for a static website.
    - No changes needed.
-   ![Storage Setting](screenshots/Picture6.png)
+
+![Storage Setting](screenshots/Picture6.png)
 
 8. **Review and Launch**  
    - Review all settings.
    - Click the orange **Launch instance** button.
-   ![Review and Launch](screenshots/Picture7.png)
+   
+![Review and Launch](screenshots/Picture7.png)
 
 9. **Confirmation**  
    - You’ll see a success message with your Instance ID (`i-xxxxxxxxxxxxxx`).
