@@ -204,6 +204,22 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
+## 🔌 Current Ports Configuration
+
+Your TechBlog is running on these ports:
+
+| Port | Service | Purpose |
+|------|---------|---------|
+| 22   | SSH     | Server access |
+| 80   | HTTP    | Web traffic (redirects to HTTPS) |
+| 443  | HTTPS   | Your secure website |
+
+These ports were configured when you:
+- **Port 22**: Automatically enabled by AWS
+- **Port 80 & 443**: You selected "Allow HTTP" and "Allow HTTPS" during EC2 setup
+
+**Your static website doesn't need any additional ports.**
+
 
 ## 🌐 Step 5: Configure DNS for Your Domain (Hostinger)
 
