@@ -4,6 +4,14 @@
 **Student ID:** 34858732  
 **GitHub Repository:** [TechBlog](https://github.com/Zohaibkhan1472/TechBlog)
 
+## 🌐 Live Deployment
+
+Access the live site using any of the following links:
+
+- http://3.92.66.234/
+- https://zohaibyounas.com/
+- https://www.zohaibyounas.com/
+
 ## 📄 Overview
 
 This guide provides a complete step-by-step tutorial for deploying a static website (TechBlog) on an Amazon EC2 instance using Ubuntu, Nginx, Git, and Certbot for HTTPS support.  
