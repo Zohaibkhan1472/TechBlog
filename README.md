@@ -8,7 +8,7 @@
 
 Access the live site using any of the following links:
 
-- http://3.92.66.234/
+- https://54.81.221.216/
 - https://zohaibyounas.com/
 - https://www.zohaibyounas.com/
 
