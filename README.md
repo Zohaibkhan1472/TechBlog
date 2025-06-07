@@ -83,7 +83,7 @@ Once your EC2 instance is in the "running" state and both health checks pass, yo
 2. Select your instance and click **Connect**.
 3. Use the **EC2 Instance Connect** tab:
    - Username: `ubuntu`
-   - Public IPv4: `3.92.66.234`
+   - Public IPv4: `54.81.221.216`
 4. Click the orange **Connect** button.
    ![Connect](screenshots/Picture9.png)
 
@@ -95,7 +95,7 @@ Once your EC2 instance is in the "running" state and both health checks pass, yo
 
 ```bash
 cd Downloads
-ssh -i "tech-blog-key.pem" ubuntu@3.92.66.234"
+ssh -i "tech-blog-key.pem" ubuntu@54.81.221.216
 ```
 ![connection success](screenshots/Picture10.png)
 
@@ -167,7 +167,7 @@ sudo nano /etc/nginx/sites-available/techblog
 ```nginx
 server {
     listen 80;
-    server_name 3.92.66.234 zohaibyounas.com www.zohaibyounas.com;
+    server_name 54.81.221.216 zohaibyounas.com www.zohaibyounas.com;
 
     root /var/www/TechBlog;
     index index.html;
@@ -251,10 +251,10 @@ If you've registered your domain with [Hostinger](https://hostinger.com), follow
 Add the following two **A records**:
 
 
-| Type | Name  | Points to (IPv4) | TTL    |
-|------|-------|------------------|--------|
-| A    | @     | 3.92.66.234      | 1400   |
-| A    | www   | 3.92.66.234      | 1400   |
+| Type | Name  | Points to (IPv4)   | TTL    |
+|------|-------|--------------------|--------|
+| A    | @     | 54.81.221.216      | 1400   |
+| A    | www   | 54.81.221.216      | 1400   |
 
 
 
@@ -343,7 +343,7 @@ If you make changes to your TechBlog repository on GitHub and want to update you
 ### 🚀 1. SSH Into Your Server
 
 ```bash
-ssh -i "tech-blog-key.pem" ubuntu@3.92.66.234
+ssh -i "tech-blog-key.pem" ubuntu@54.81.221.216
 ```
 
 ---
