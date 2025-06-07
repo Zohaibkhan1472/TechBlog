@@ -1,24 +1,24 @@
-# 📘 TechBlog Deployment Guide
+#  TechBlog Deployment Guide
 
 **Author:** Zohaib Younas  
 **Student ID:** 34858732  
 **GitHub Repository:** [TechBlog](https://github.com/Zohaibkhan1472/TechBlog)
 
-## 🌐 Live Deployment
+##  Live Deployment
 
 Access the live site using any of the following links:
 
 - https://zohaibyounas.com/
 - https://www.zohaibyounas.com/
 
-## 📄 Overview
+##  Overview
 
 This guide provides a complete step-by-step tutorial for deploying a static website (TechBlog) on an Amazon EC2 instance using Ubuntu, Nginx, Git, and Certbot for HTTPS support.  
 You will launch a virtual server, install necessary software, deploy your website from GitHub, and configure domain and SSL settings.
 
 ---
 
-## ☁️ Step 1: Launch EC2 Instance
+## ☁ Step 1: Launch EC2 Instance
 
 1. **Open AWS Console**  
    Log in to the [AWS Management Console](https://aws.amazon.com/console/) and search for `EC2`.
@@ -47,9 +47,9 @@ You will launch a virtual server, install necessary software, deploy your websit
 
 6. **Configure Firewall (Security Group)**  
    Ensure these rules are enabled:
-   - ✅ Allow **SSH** (default)
-   - ✅ Allow **HTTP** from the internet
-   - ✅ Allow **HTTPS** from the internet
+   -  Allow **SSH** (default)
+   -  Allow **HTTP** from the internet
+   -  Allow **HTTPS** from the internet
     ![Network Setting](screenshots/Picture5.png)
 
 7. **Storage Settings**  
@@ -72,11 +72,11 @@ You will launch a virtual server, install necessary software, deploy your websit
 
 ---
 
-## 🔗 Step 2: Connect to Your EC2 Instance
+##  Step 2: Connect to Your EC2 Instance
 
 Once your EC2 instance is in the "running" state and both health checks pass, you can connect using either the AWS console or your terminal.
 
-### 💻 Method 1: EC2 Instance Connect (Browser)
+###  Method 1: EC2 Instance Connect (Browser)
 
 1. Go to the **EC2 Dashboard**.
 2. Select your instance and click **Connect**.
@@ -86,11 +86,11 @@ Once your EC2 instance is in the "running" state and both health checks pass, yo
 4. Click the orange **Connect** button.
    ![Connect](screenshots/Picture9.png)
 
-> ✅ You’ll be connected to your server via browser-based SSH.
+>  You’ll be connected to your server via browser-based SSH.
 
 ---
 
-### 🖥️ Method 2: Using Windows Command Prompt (with .pem file)
+###  Method 2: Using Windows Command Prompt (with .pem file)
 
 ```bash
 cd Downloads
@@ -98,13 +98,13 @@ ssh -i "tech-blog-key.pem" ubuntu@54.81.221.216
 ```
 ![connection success](screenshots/Picture10.png)
 
-## ⚙️ Step 3: Set Up Your Server
+##  Step 3: Set Up Your Server
 
 Follow the steps below to install required software, deploy your website, and configure your server.
 
 ---
 
-### 🔄 1. Update the System
+###  1. Update the System
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -113,7 +113,7 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-### 🌐 2. Install Web Server Software
+###  2. Install Web Server Software
 
 ```bash
 sudo apt install nginx git certbot python3-certbot-nginx -y
@@ -121,7 +121,7 @@ sudo apt install nginx git certbot python3-certbot-nginx -y
 
 ---
 
-### ▶️ 3. Start and Enable Nginx
+###  3. Start and Enable Nginx
 
 ```bash
 sudo systemctl start nginx
@@ -130,7 +130,7 @@ sudo systemctl enable nginx
 
 ---
 
-### 📥 4. Download Website Files
+###  4. Download Website Files
 
 ```bash
 cd /var/www/
@@ -139,7 +139,7 @@ sudo git clone https://github.com/Zohaibkhan1472/TechBlog.git
 
 ---
 
-### 🔐 5. Set Proper File Permissions
+###  5. Set Proper File Permissions
 
 ```bash
 sudo chown -R www-data:www-data /var/www/TechBlog
@@ -147,13 +147,13 @@ sudo chmod -R 755 /var/www/TechBlog
 ```
 
 
-## 🛠️ Step 4: Configure Nginx
+##  Step 4: Configure Nginx
 
 In this step, you'll create a configuration file to tell Nginx how to serve your website.
 
 ---
 
-### 📝 1. Create a New Configuration File
+###  1. Create a New Configuration File
 
 ```bash
 sudo nano /etc/nginx/sites-available/techblog
@@ -161,7 +161,7 @@ sudo nano /etc/nginx/sites-available/techblog
 
 ---
 
-### 🧾 2. Paste the Following Configuration
+###  2. Paste the Following Configuration
 
 ```nginx
 server {
@@ -187,7 +187,7 @@ server {
 
 ---
 
-### 🔗 3. Enable the Configuration
+###  3. Enable the Configuration
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/techblog /etc/nginx/sites-enabled/
@@ -196,7 +196,7 @@ sudo rm /etc/nginx/sites-enabled/default
 
 ---
 
-### 🧪 4. Test Nginx Configuration
+###  4. Test Nginx Configuration
 
 ```bash
 sudo nginx -t
@@ -205,13 +205,13 @@ sudo nginx -t
 
 ---
 
-### 🔄 5. Restart Nginx
+###  5. Restart Nginx
 
 ```bash
 sudo systemctl restart nginx
 ```
 
-## 🔌 Current Ports Configuration
+##  Current Ports Configuration
 
 Your TechBlog is running on these ports:
 
@@ -228,13 +228,13 @@ These ports were configured when you:
 **Your static website doesn't need any additional ports.**
 
 
-## 🌐 Step 5: Configure DNS for Your Domain (Hostinger)
+##  Step 5: Configure DNS for Your Domain (Hostinger)
 
 If you've registered your domain with [Hostinger](https://hostinger.com), follow these steps to point it to your EC2 instance:
 
 ---
 
-### 🛎️ 1. Login to Hostinger Dashboard
+###  1. Login to Hostinger Dashboard
 
 1. Visit [https://www.hostinger.com](https://www.hostinger.com) and log in.
 2. Go to **Domains** from the left sidebar.
@@ -245,7 +245,7 @@ If you've registered your domain with [Hostinger](https://hostinger.com), follow
 
 ---
 
-### 🧾 2. Add A Records
+###  2. Add A Records
 
 Add the following two **A records**:
 
@@ -257,21 +257,21 @@ Add the following two **A records**:
 
 
 
-> ✅ `@` maps to your root domain  
-> ✅ `www` allows visitors to reach `www.zohaibyounas.com`
+>  `@` maps to your root domain  
+>  `www` allows visitors to reach `www.zohaibyounas.com`
 
 ![DNS1](screenshots/Picture14.png)
 ![DNS1](screenshots/Picture15.png)
 
 ---
 
-### ❌ 3. Delete Conflicting A Records
+###  3. Delete Conflicting A Records
 
 Remove any other A records that point to old or different IP addresses to avoid conflicts.
 
 ---
 
-### ⏳ 4. Wait for DNS Propagation
+###  4. Wait for DNS Propagation
 
 Changes can take **15–60 minutes** to fully propagate across the internet.
 
@@ -282,15 +282,15 @@ You can monitor DNS status here:
 
 ---
 
-✅ Once DNS is propagated and your domain shows your server’s Nginx welcome page or website files, continue to the next step: **installing SSL**.
+Once DNS is propagated and your domain shows your server’s Nginx welcome page or website files, continue to the next step: **installing SSL**.
 
-## 🔐 Step 6: Secure Your Site with SSL (Certbot)
+##  Step 6: Secure Your Site with SSL (Certbot)
 
 Now that your domain points to your EC2 server, you can use Certbot to install a free SSL certificate and enable HTTPS.
 
 ---
 
-### 📥 1. Run Certbot for Nginx
+###  1. Run Certbot for Nginx
 
 ```bash
 sudo certbot --nginx -d zohaibyounas.com -d www.zohaibyounas.com
@@ -298,18 +298,18 @@ sudo certbot --nginx -d zohaibyounas.com -d www.zohaibyounas.com
 
 ---
 
-### 🧭 2. Follow Certbot Prompts
+###  2. Follow Certbot Prompts
 
 You will be asked the following:
 
-- 📧 **Email Address** – for renewal and security notifications.
-- ✅ **Agree to Terms of Service** – type `Y` and press Enter.
-- 🗞️ **Subscribe to EFF newsletter** – optional, type `Y` or `N`.
-- 🔄 **Redirect HTTP to HTTPS** – choose the redirect option when asked.
+-  **Email Address** – for renewal and security notifications.
+-  **Agree to Terms of Service** – type `Y` and press Enter.
+-  **Subscribe to EFF newsletter** – optional, type `Y` or `N`.
+-  **Redirect HTTP to HTTPS** – choose the redirect option when asked.
 
 ---
 
-### ✅ 3. Successful Output
+###  3. Successful Output
 
 After a successful installation, you should see:
 ![DNS1](screenshots/Picture16.png)
@@ -324,7 +324,7 @@ Your certificate is valid for 90 days and will **automatically renew**.
 
 ---
 
-### 🔁 4. Test SSL and HTTPS
+###  4. Test SSL and HTTPS
 
 Visit your site in a browser:
 
@@ -333,13 +333,13 @@ Visit your site in a browser:
 
 > You should now see the 🔒 lock icon in the address bar — confirming HTTPS is active.
 
-## 🔄 Step 7: Update Website Content in the Future
+##  Step 7: Update Website Content in the Future
 
 If you make changes to your TechBlog repository on GitHub and want to update your live website, follow these steps:
 
 ---
 
-### 🚀 1. SSH Into Your Server
+###  1. SSH Into Your Server
 
 ```bash
 ssh -i "tech-blog-key.pem" ubuntu@54.81.221.216
@@ -347,7 +347,7 @@ ssh -i "tech-blog-key.pem" ubuntu@54.81.221.216
 
 ---
 
-### 📁 2. Navigate to Your Website Directory
+###  2. Navigate to Your Website Directory
 
 ```bash
 cd /var/www/TechBlog
@@ -355,23 +355,23 @@ cd /var/www/TechBlog
 
 ---
 
-### 🔃 3. Pull Latest Changes from GitHub
+###  3. Pull Latest Changes from GitHub
 
 ```bash
 sudo git pull origin main
 ```
 
-> ✅ Your server will now have the latest version of your TechBlog files.
+>  Your server will now have the latest version of your TechBlog files.
 
 ---
 
-### 🛠️ 4. (Optional) Restart Nginx if You Updated Config Files
+###  4. (Optional) Restart Nginx if You Updated Config Files
 
 ```bash
 sudo systemctl restart nginx
 ```
 
-> 💡 Only needed if configuration files or routes were changed.
+>  Only needed if configuration files or routes were changed.
 
 
 
