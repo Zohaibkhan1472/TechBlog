@@ -3,7 +3,7 @@
 **Author:** Zohaib Younas  
 **Student ID:** 34858732  
 **GitHub Repository:** [TechBlog](https://github.com/Zohaibkhan1472/TechBlog)
-
+**Video Explainer Link:** [Video]_(https://drive.google.com/file/d/1SkSEeAnmGWMAPsXEcXZ5jDX5NNoOYgld/view?usp=sharing)
 ##  Live Deployment
 
 Access the live site using any of the following links:
