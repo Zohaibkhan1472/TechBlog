@@ -345,7 +345,7 @@ If you make changes to your TechBlog repository on GitHub and want to update you
 ###  1. SSH Into Your Server
 
 ```bash
-ssh -i "tech-blog-key.pem" ubuntu@54.81.221.216
+ssh -i "tech-blog-key.pem" ubuntu@ 54.81.221.216
 ```
 
 ---
