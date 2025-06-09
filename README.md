@@ -4,7 +4,7 @@
 **Student ID:** 34858732  
 **GitHub Repository:** [TechBlog](https://github.com/Zohaibkhan1472/TechBlog)
 
-**Video Explainer Link:** [Video](https://drive.google.com/file/d/1SkSEeAnmGWMAPsXEcXZ5jDX5NNoOYgld/view?usp=sharing)
+**Video Explainer Link:** [Video](https://drive.google.com/file/d/1_xAIYdmEol7iIX2hh6xX5i9blyEsRoTv/view?usp=drive_link)
 
 **IP Address:** 54.81.221.216
 ##  Live Deployment
