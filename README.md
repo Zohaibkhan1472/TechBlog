@@ -5,6 +5,7 @@
 **GitHub Repository:** [TechBlog](https://github.com/Zohaibkhan1472/TechBlog)
 
 **Video Explainer Link:** [Video](https://drive.google.com/file/d/1SkSEeAnmGWMAPsXEcXZ5jDX5NNoOYgld/view?usp=sharing)
+**IP Address:** 54.81.221.216
 ##  Live Deployment
 
 Access the live site using any of the following links:
